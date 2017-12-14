@@ -1,0 +1,126 @@
+html, body {
+    background-color: grey;
+    margin:5px;
+    padding:5px;
+    height:100%;
+    margin-top: 0px;
+}
+
+
+.current_page {
+    color: orange;
+    font-style: serif;
+    font-weight: bold;
+}
+
+
+ ul{
+
+    background-color: black;
+}
+
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-size: 15px;
+
+}
+/*Menu css (margins etc*/
+li {
+    float: left;
+    margin-left: 10.5%;
+}
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 3px 3px;
+    text-decoration: none;
+}
+li a:hover
+{
+    color: dodgerblue;
+}
+
+/* header */
+
+h1 {text-align: center}
+h2 {text-align: center}
+h3 {text-align: center}
+h4 {text-align: center}
+h5 {text-align: center}
+
+p{
+    font-size: 15px;
+    text-align: center;
+
+}
+
+header {
+
+    background-color: grey;
+        }
+
+/* table*/
+
+table, th, td {
+    width: 40%;
+    margin: auto;
+    border-collapse: collapse;
+    border: 2px solid black;
+    padding: 15px;
+}
+
+/* login table */
+.field{
+    width: 20%;
+    height: 10%;
+    margin: auto;
+    border: 2px solid #DFDFDF;
+    padding: 3px;
+    }
+.table{
+    width: 30%;
+    height: 30%;
+    margin: auto;
+    padding: 3px;
+    border:none;
+}
+ .label{
+    color: black;
+    font-size: 14px;
+    font-weight: bold;
+    width: 75px;
+    margin-left: 10px;
+
+
+ }
+.legend {
+    color: black;
+    background-color: #EFEFEF;
+    border: 5px solid #DFDFDF;
+    padding: 3px;
+    font-weight: bold;
+    margin-left:-8px; }
+
+.td  {
+    border:none;
+}
+.tr {
+    border:none;
+}
+
+.error  {text-align: center;
+    color: #9090B0;
+    }
+
+section {
+    color: black;
+    text-align: right;
+        }
+
+.admin {float: left;
+    margin-left: 250px;}

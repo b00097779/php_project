@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>index - {{ pageName }} page</title>
+    <style>
+        @import '/css/style.css';
+        @import '/css/footer.css';
+
+    </style>
+
+
+</head>
+<body>
+
+
+{% block header %}
+    <header>
+
+        <img src="../images/bf1.png" alt="logo" style="width:100%;height:5%;"  >
+
+    </header>
+{% endblock %}
+
+
+
+
+{# MENU #}
+<navbar>
+<ul>
+    <li>
+        <a href="/" class="{% block homePageLinkStyle %}{% endblock %}">Home</a>
+    </li>
+
+    <li>
+        <a href="/index.php?action=gameplay" class="{% block gameplayPageLinkStyle %}{% endblock %}">Gameplay</a>
+    </li>
+
+    <li>
+        <a href="/index.php?action=dev" class="{% block devPageLinkStyle %}{% endblock %}">EA DICE</a>
+    </li>
+
+    <li>
+        <a href="/index.php?action=shop" class="{% block shopPageLinkStyle %}{% endblock %}">Products</a>
+    </li>
+
+    <li>
+        <a href="/index.php?action=login" class="{% block loginPageLinkStyle %}{% endblock %}">Login</a>
+
+    </li>
+
+    <li>
+        <a href="/index.php?action=admin" class="{% block adminPageLinkStyle %}{% endblock %}">Registration</a>
+
+    </li>
+
+</ul>
+</navbar>
+
+
+
+{#Navbar if logged Admin navabar#}
+{% if isLoggedIn %}
+
+    <nav>
+        <ul>
+         {#   <li><a href="/index.php?action=adminHome" class="{% block adminPagePageLinkStyle %}{% endblock %}" >Admin Home</a></li> #}
+            <li class="admin"><a href="/index.php?action=item" class="{% block itemPageLinkStyle %}{% endblock %}" >List of Items</a></li>
+            <li class="admin"><a href="/index.php?action=add" class="{% block addPageLinkStyle %}{% endblock %}" >Add Items</a></li>
+            <li class="admin"><a href="/index.php?action=delete" class="{% block deletePageLinkStyle %}{% endblock %}" >Delete Items</a></li>
+            {#   <li><a href="/index.php?action=adminDeleteAll" class="{% block adminDeleteAllLinkStyle %}{% endblock %}">delete ALL products !</a></li> #}
+
+
+
+          </ul>
+      </nav>
+      {#section if loggedin#}
+    <section>
+        {% if isLoggedIn %}
+            Logged as: <strong>{{ username }}</strong>
+
+            {% if userRole is defined %}
+                (role = {{ userRole }})
+            {% endif %}
+            <br>
+            <a href="/index.php?action=logout"><strong>Logout</strong></a>
+        {% endif %}
+
+
+
+    </section>
+{% endif %}
+
+
+
+
+
+{% block main %}
+
+{% endblock %}
+
+
+<footer>
+    Copyright &copy; 2017 Mack
+</footer>
+
+</body>
+</html>
